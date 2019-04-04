@@ -12,16 +12,13 @@
     background: $homeWhite;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
     .first-container {
         position: relative;
         height: 100%;
         width: 100%;
-        margin-top: 130px;
         display: flex;
         align-items: center;
         justify-content: center;
-        top: -70px;
         .front-text {
             margin: 0 120px 0 0;
             h1 {
@@ -47,6 +44,30 @@
                 background-position: center center;
                 width: 300px;
                 height: 300px;
+            }
+        }
+    }
+    .skills-section {
+        color: blue;
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .skills-container {
+            display: flex;
+            width: 100%;
+            height: 500px;
+            background: blue;
+            justify-content: center;
+            .skill-type {
+                margin: 0 20px;
+                width: 400px;
+                background: red;
+                text-align: center;
+                background: white;
+                h3 {
+                    background: gold;
+                }
             }
         }
     }

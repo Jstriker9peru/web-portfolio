@@ -6,7 +6,6 @@ class App extends Component {
     return (
       <div className="App">
         <Home />
-        <div className="skills" style={{height: '100vh', background: 'white'}}>Whatup</div>
       </div>
     );
   }
