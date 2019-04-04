@@ -1,0 +1,55 @@
+@import '../../../../colors.scss';
+
+.hexagon {
+    position: relative;
+    width: 90px; 
+    height: 46.19px;
+    background-color: $homeWhite;
+    margin: 23.09px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    &:hover {
+        background: rgba(224, 242, 243, 0.8);
+        h1 {
+            text-decoration: underline;
+            text-decoration-color: $darkBlue;
+            color: $lightBlue;
+        }
+        &:before {
+            border-bottom: 23.09px solid rgba(224, 242, 243, 0.8);
+        }
+        &:after {
+            border-top: 23.09px solid rgba(224, 242, 243, 0.8);
+        }
+    }
+    h1 {
+        position: relative;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: $darkBrown;
+    }
+    &:before,
+    &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    transition: all .1s ease-in-out;
+    }
+    
+    &:before {
+    bottom: 100%;
+    border-bottom: 23.09px solid $darkBlue;
+    }
+    
+    &:after {
+    top: 100%;
+    width: 0;
+    border-top: 23.09px solid $darkBlue;
+    }
+}
+    
