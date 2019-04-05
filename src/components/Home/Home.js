@@ -21,6 +21,7 @@ class Home extends Component {
                     </div>
                 </section>
                 <section className="skills-section" style={{height: '100vh', background: 'white'}}>
+                    <h1>Skills</h1>
                     <div className="skills-container">
                         <div className="skill-type">
                             <h3>Front</h3>
