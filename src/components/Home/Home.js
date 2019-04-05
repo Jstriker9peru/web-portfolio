@@ -2,12 +2,20 @@ import React, { Component } from 'react';
 import './Home.scss';
 import Header from '../elements/Header/Header';
 import Skill from '../elements/Skill/Skill';
-import pug from '../elements/Skill/logos/pug-logo.png';
-import javascript from '../elements/Skill/logos/javascript-logo.png';
-import react from '../elements/Skill/logos/react-logo.png';
-import html5 from '../elements/Skill/logos/html5-logo.png';
-import css3 from '../elements/Skill/logos/css3-logo.png';
-import sass from '../elements/Skill/logos/sass-logo.png';
+import pug from '../../images/logos/pug-logo.png';
+import javascript from '../../images/logos/javascript-logo.png';
+import react from '../../images/logos/react-logo.png';
+import html5 from '../../images/logos/html5-logo.png';
+import css3 from '../../images/logos/css3-logo.png';
+import sass from '../../images/logos/sass-logo.png';
+import jquery from '../../images/logos/jquery-logo.png';
+import node from '../../images/logos/node-logo.png';
+import gulp from '../../images/logos/gulp-logo.png';
+import mysql from '../../images/logos/mysql-logo.png';
+import php from '../../images/logos/php-logo.png';
+import laravel from '../../images/logos/laravel-logo.png';
+import wordpress from '../../images/logos/wordpress-logo.png';
+import webpack from '../../images/logos/webpack-logo.png';
 
 class Home extends Component {
     state = {
@@ -54,8 +62,66 @@ class Home extends Component {
                 alt: 'Sass Logo',
                 width: '',
                 height: '',
+            },
+            {
+                name: 'jQuery',
+                src: jquery,
+                alt: 'jQuery Logo',
+                width: '',
+                height: '',
+            },
+            {
+                name: 'Gulp',
+                src: gulp,
+                alt: 'Gulp Logo',
+                width: '',
+                height: '',
             }
 
+        ],
+        other: [
+            {
+                name: 'PHP',
+                src: php,
+                alt: 'PHP Logo',
+                width: '',
+                height: '',
+            },
+            {
+                name: 'MySQL',
+                src: mysql,
+                alt: 'MySQL Logo',
+                width: '',
+                height: '',
+            },
+            {
+                name: 'Node JS',
+                src: node,
+                alt: 'Node JS Logo',
+                width: '',
+                height: '',
+            },
+            {
+                name: 'Laravel',
+                src: laravel,
+                alt: 'Laravel Logo',
+                width: '',
+                height: '',
+            },
+            {
+                name: 'WordPress',
+                src: wordpress,
+                alt: 'WordPress Logo',
+                width: '',
+                height: '',
+            },
+            {
+                name: 'Webpack',
+                src: webpack,
+                alt: 'Webpack Logo',
+                width: '',
+                height: '',
+            }
         ]
     }
     render() {
@@ -72,11 +138,11 @@ class Home extends Component {
                         <img src="https://previews.123rf.com/images/jemastock/jemastock1705/jemastock170506999/78062109-young-man-face-isolated-on-white-background-handsome-boy-face-expression-cartoon-vector-illustration.jpg" alt="avatar" />
                     </div>
                 </section>
-                <section className="skills-section" style={{height: '100vh', background: 'white'}}>
+                <section className="skills-section">
                     <h1>Skills</h1>
                     <div className="skills-container">
                         <div className="skill-type">
-                            <h3>Front</h3>
+                            <h3>Front-End</h3>
                             <div className="logo-box">
                                 {this.state.front.map((el, index) => {
                                     return <Skill key={index} name={el.name} imgsrc={el.src} alt={el.alt}  />
@@ -84,10 +150,12 @@ class Home extends Component {
                             </div>
                         </div>
                         <div className="skill-type">
-                            <h3>Back</h3>                            
-                        </div>
-                        <div className="skill-type">
-                            <h3>CMS</h3>                        
+                            <h3>Other</h3>
+                            <div className="logo-box">
+                                {this.state.other.map((el, index) => {
+                                    return <Skill key={index} name={el.name} imgsrc={el.src} alt={el.alt}  />
+                                })}
+                            </div>  
                         </div>
                     </div>
                 </section>

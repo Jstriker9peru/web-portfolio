@@ -47,34 +47,37 @@
         }
     }
     .skills-section {
-        color: blue;
-        font-size: 50px;
+        height: 100vh;
+        font-size: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        background: $lightestBrown;
+
         h1 {
             margin-bottom: 30px;
+            color: $darkBlue;
         }
         .skills-container {
             display: flex;
             width: 100%;
-            height: 500px;
-            background: blue;
+            height: 550px;
             justify-content: center;
             .skill-type {
                 margin: 0 20px;
                 width: 400px;
-                background: red;
                 text-align: center;
-                background: white;
+                border: 4px solid rgba(223, 187, 154, 0.219);
                 .logo-box {
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
+                    padding-top: 20px;
                 }
                 h3 {
-                    background: gold;
+                    background: $lightBlue;
+                    color: rgb(221, 226, 235);
                 }
             }
         }
