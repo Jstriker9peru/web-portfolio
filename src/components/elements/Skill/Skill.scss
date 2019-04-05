@@ -10,14 +10,9 @@
         position: relative;
         width: 140px;
         text-align: center;
-        .tag {
-            position: absolute;
-            bottom: -30px;
-            padding: 0 2px;
-            left: 10px;
-            border-radius: 14px;
-            font-size: 20px;
-        }
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         .circle {
             width: 100px;
             height: 100px;
@@ -31,6 +26,12 @@
                 height: 80px;
                 font-size: 15px;
             }
+        }
+        .tag {
+            padding: 0 2px;
+            border-radius: 14px;
+            font-size: 20px;
+            width: 80%;
         }
     }
 }

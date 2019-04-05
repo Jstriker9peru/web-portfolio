@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import './Home.scss';
 import Header from '../elements/Header/Header';
 import Skill from '../elements/Skill/Skill';
-import '../../images/logos/react-logo.png';
+import pug from '../elements/Skill/logos/pug-logo.png';
+import javascript from '../elements/Skill/logos/javascript-logo.png';
+import react from '../elements/Skill/logos/react-logo.png';
+import html5 from '../elements/Skill/logos/html5-logo.png';
+import css3 from '../elements/Skill/logos/css3-logo.png';
+import sass from '../elements/Skill/logos/sass-logo.png';
 
 class Home extends Component {
     state = {
@@ -10,42 +15,42 @@ class Home extends Component {
         front: [
             {
                 name: 'React JS',
-                src: './logos/react-logo.png',
+                src: react,
                 alt: 'React Logo',
                 width: '',
                 height: '',
             },
             {
                 name: 'JavaScript',
-                src: '../../../images/logos/javascript-logo.png',
+                src: javascript,
                 alt: 'JavaScript Logo',
                 width: '',
                 height: '',
             },
             {
                 name: 'HTML5',
-                src: '../../images/logos/html5-logo',
+                src: html5,
                 alt: 'HTML5 Logo',
                 width: '',
                 height: '',
             },
             {
                 name: 'CSS3',
-                src: '../../images/logos/css3-logo',
+                src: css3,
                 alt: 'CSS3 Logo',
                 width: '',
                 height: '',
             },
             {
                 name: 'Pug JS',
-                src: '../../images/logos/pug-logo',
+                src: pug,
                 alt: 'Pug Logo',
                 width: '',
                 height: '',
             },
             {
                 name: 'Sass',
-                src: '../../images/logos/sass-logo',
+                src: sass,
                 alt: 'Sass Logo',
                 width: '',
                 height: '',
