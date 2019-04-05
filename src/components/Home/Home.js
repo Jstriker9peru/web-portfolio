@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Home.scss';
 import Header from '../elements/Header/Header';
 import Skill from '../elements/Skill/Skill';
+import Project from '../elements/Project/Project';
 import pug from '../../images/logos/pug-logo.png';
 import javascript from '../../images/logos/javascript-logo.png';
 import react from '../../images/logos/react-logo.png';
@@ -16,6 +17,7 @@ import php from '../../images/logos/php-logo.png';
 import laravel from '../../images/logos/laravel-logo.png';
 import wordpress from '../../images/logos/wordpress-logo.png';
 import webpack from '../../images/logos/webpack-logo.png';
+import projectBg from '../../images/project-bg.jpg';
 
 class Home extends Component {
     state = {
@@ -140,6 +142,7 @@ class Home extends Component {
                 </section>
                 <section className="skills-section">
                     <h1>Skills</h1>
+                    <hr />
                     <div className="skills-container">
                         <div className="skill-type type1">
                             <h2>Front-End</h2>
@@ -158,6 +161,24 @@ class Home extends Component {
                             </div>  
                         </div>
                     </div>
+                </section>
+
+                <section className="project-section" style={{
+                    backgroundImage: `linear-gradient(rgba(0,134,215,0.45),
+                     rgba(0,134,215,0.45)), url(${projectBg})`, 
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                    filter: 'grayscale(50%)'
+                    }}>
+                    <h1>Projects</h1>
+                    <div className="projects-container">
+                        <Project />
+                        <Project />
+                        <Project />
+                        <Project />
+                    </div>
+
                 </section>
             </div>
         )
