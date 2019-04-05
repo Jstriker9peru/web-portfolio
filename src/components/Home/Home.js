@@ -2,17 +2,55 @@ import React, { Component } from 'react';
 import './Home.scss';
 import Header from '../elements/Header/Header';
 import Skill from '../elements/Skill/Skill';
+import '../../images/logos/react-logo.png';
 
 class Home extends Component {
     state = {
         links: ['Home', 'About', 'Projects', 'Contact'],
-        font: [
+        front: [
             {
                 name: 'React JS',
-                src: '',
+                src: './logos/react-logo.png',
+                alt: 'React Logo',
+                width: '',
+                height: '',
+            },
+            {
+                name: 'JavaScript',
+                src: '../../../images/logos/javascript-logo.png',
+                alt: 'JavaScript Logo',
+                width: '',
+                height: '',
+            },
+            {
+                name: 'HTML5',
+                src: '../../images/logos/html5-logo',
+                alt: 'HTML5 Logo',
+                width: '',
+                height: '',
+            },
+            {
+                name: 'CSS3',
+                src: '../../images/logos/css3-logo',
+                alt: 'CSS3 Logo',
+                width: '',
+                height: '',
+            },
+            {
+                name: 'Pug JS',
+                src: '../../images/logos/pug-logo',
+                alt: 'Pug Logo',
+                width: '',
+                height: '',
+            },
+            {
+                name: 'Sass',
+                src: '../../images/logos/sass-logo',
+                alt: 'Sass Logo',
                 width: '',
                 height: '',
             }
+
         ]
     }
     render() {
@@ -35,10 +73,9 @@ class Home extends Component {
                         <div className="skill-type">
                             <h3>Front</h3>
                             <div className="logo-box">
-                                <Skill />
-                                <Skill />
-                                <Skill />
-                                <Skill />
+                                {this.state.front.map((el, index) => {
+                                    return <Skill key={index} name={el.name} imgsrc={el.src} alt={el.alt}  />
+                                })}
                             </div>
                         </div>
                         <div className="skill-type">
