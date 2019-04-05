@@ -131,7 +131,7 @@ class Home extends Component {
                 <section className="first-container">
                     <div className="front-text">
                         <h1>Jonathan Espinoza</h1>
-                        <h2>Front-End Developer</h2>
+                        <h2>Front-End Web Developer</h2>
                         <p>I design and code beautifully simple things, and I love what I do.</p>
                     </div>
                     <div className="pic">
@@ -141,16 +141,16 @@ class Home extends Component {
                 <section className="skills-section">
                     <h1>Skills</h1>
                     <div className="skills-container">
-                        <div className="skill-type">
-                            <h3>Front-End</h3>
+                        <div className="skill-type type1">
+                            <h2>Front-End</h2>
                             <div className="logo-box">
                                 {this.state.front.map((el, index) => {
                                     return <Skill key={index} name={el.name} imgsrc={el.src} alt={el.alt}  />
                                 })}
                             </div>
                         </div>
-                        <div className="skill-type">
-                            <h3>Other</h3>
+                        <div className="skill-type type2">
+                            <h2>Other</h2>
                             <div className="logo-box">
                                 {this.state.other.map((el, index) => {
                                     return <Skill key={index} name={el.name} imgsrc={el.src} alt={el.alt}  />
