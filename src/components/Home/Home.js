@@ -131,7 +131,7 @@ class Home extends Component {
                 <section className="first-container">
                     <div className="front-text">
                         <h1>Jonathan Espinoza</h1>
-                        <h2>Front-End Web Developer</h2>
+                        <h2>Professional Web Developer</h2>
                         <p>I design and code beautifully simple things, and I love what I do.</p>
                     </div>
                     <div className="pic">
