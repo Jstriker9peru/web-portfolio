@@ -37,7 +37,6 @@
             position: relative;
             width: 300px;
             height: 300px;
-            background: black;
             img {
                 border-radius: 50%;
                 background-size: cover;
@@ -54,6 +53,9 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        h1 {
+            margin-bottom: 30px;
+        }
         .skills-container {
             display: flex;
             width: 100%;
@@ -66,6 +68,9 @@
                 background: red;
                 text-align: center;
                 background: white;
+                .logo-box {
+                    display: flex;
+                }
                 h3 {
                     background: gold;
                 }

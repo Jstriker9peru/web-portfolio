@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
 import './Home.scss';
 import Header from '../elements/Header/Header';
+import Skill from '../elements/Skill/Skill';
 
 class Home extends Component {
     state = {
-        links: ['Home', 'About', 'Projects', 'Contact']
+        links: ['Home', 'About', 'Projects', 'Contact'],
+        font: [
+            {
+                name: 'React JS',
+                src: '',
+                width: '',
+                height: '',
+            }
+        ]
     }
     render() {
         return (
@@ -25,6 +34,12 @@ class Home extends Component {
                     <div className="skills-container">
                         <div className="skill-type">
                             <h3>Front</h3>
+                            <div className="logo-box">
+                                <Skill />
+                                <Skill />
+                                <Skill />
+                                <Skill />
+                            </div>
                         </div>
                         <div className="skill-type">
                             <h3>Back</h3>                            
