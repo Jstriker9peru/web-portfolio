@@ -2,14 +2,14 @@
 
 .Header {
     background: $lightBlue;
-    min-height: 90px;
+    min-height: 70px;
     width: 100%;
-    height: auto;
+    height: 70px;
     font-size: 50px;
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px 35px;
     position: fixed;
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
@@ -17,14 +17,14 @@
     .link-container {
         display: flex;
     }
-    .icon {
-        background: white;
-        width: 200px;
-        height: 80px;
-        text-align: center;
-        padding: 10px;
-        font-size: 20px;
-        border: 4px solid black;
-        color: black;
-    }
+    // .icon {
+    //     background: white;
+    //     width: 200px;
+    //     height: 80px;
+    //     text-align: center;
+    //     padding: 10px;
+    //     font-size: 20px;
+    //     border: 4px solid black;
+    //     color: black;
+    // }
 }

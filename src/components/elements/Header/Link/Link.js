@@ -3,7 +3,7 @@ import './Link.scss';
 
 const Link = ({ name }) => {
     return (
-        <div className="hexagon">
+        <div className="box">
             <h1>{name}</h1>
         </div>
             

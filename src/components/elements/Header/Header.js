@@ -6,9 +6,9 @@ const Header = ({ links }) => {
     console.log(links);
     return (
         <div className="Header">
-            <div className="icon">
+            {/* <div className="icon">
                 <h1>Header</h1>
-            </div>
+            </div> */}
             <div className="link-container">
                 {links.map((el, index) => <Link key={index} name={el} />)}
             </div>
