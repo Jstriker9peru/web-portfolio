@@ -1,0 +1,83 @@
+@import '../../../colors.scss';
+
+footer {
+    height: 300px;
+    width: 100%;
+    background: white;
+    font-family: "europa", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .resume-container {
+        font-size: 18px;
+        color: rgba(0,0,0,0.7);
+        margin: 30px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        .button {
+            width: 110px;
+            height: 47px;
+            margin-left: 10px;
+            background: black;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $homeWhite;
+            letter-spacing: 1.2px;
+            text-transform: capitalize;
+            .far {
+                color: $homeWhite;
+                margin-right: 5px;
+            }
+            &:hover {
+                background: $darkBlue;
+                .far {
+                    color: white;
+                }
+            }
+        }
+    }
+    .sites-container {
+        width: 300px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .email-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2px 0;
+            .circle {
+                width: 50px;
+                height: 50px;
+                background: black;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                .fas,
+                .fab {
+                    color: $homeWhite;
+                    font-size: 26px;
+                }
+                &:hover {
+                    background: $darkBlue;
+                    .fas,
+                    .fab {
+                        color: white;
+                    }
+                }
+            }
+            span {
+                color: rgba(0,0,0,0.4);
+                margin-left: 15px;
+                font-size: 16px;
+            }
+        }
+    }
+}

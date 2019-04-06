@@ -3,6 +3,7 @@ import './Home.scss';
 import Header from '../elements/Header/Header';
 import Skill from '../elements/Skill/Skill';
 import Project from '../elements/Project/Project';
+import Footer from '../elements/Footer/Footer';
 import pug from '../../images/logos/pug-logo.png';
 import javascript from '../../images/logos/javascript-logo.png';
 import react from '../../images/logos/react-logo.png';
@@ -178,8 +179,8 @@ class Home extends Component {
                         <Project />
                         <Project />
                     </div>
-
                 </section>
+                <Footer />
             </div>
         )
     }

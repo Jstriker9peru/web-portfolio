@@ -3,7 +3,7 @@ import './Link.scss';
 
 const Link = ({ name }) => {
     return (
-        <div className="box">
+        <div className="links">
             <h1>{name}</h1>
         </div>
             
