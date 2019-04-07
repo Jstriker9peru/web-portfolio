@@ -142,7 +142,7 @@ class Home extends Component {
                     </div>
                 </section>
                 <section className="skills-section">
-                    <h1>Skills</h1>
+                    <h1>SKILLS</h1>
                     <hr />
                     <div className="skills-container">
                         <div className="skill-type type1">

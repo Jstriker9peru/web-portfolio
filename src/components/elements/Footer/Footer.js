@@ -13,6 +13,7 @@ const Footer = () => {
                 <h3>Check Out My</h3>
                 <div className="button">
                     <div>Resume</div>
+                    <i class="fas fa-external-link-alt"></i>
                 </div>
             </div>
             <div className="sites-container">
@@ -24,7 +25,7 @@ const Footer = () => {
                 </div>
                 <div className="email-container">
                     <div className="circle">
-                    <i className="fab fa-linkedin-in"></i>
+                    <i className="fab fa-linkedin"></i>
                     </div>
                     <span>LinkedIn</span>
                 </div>
