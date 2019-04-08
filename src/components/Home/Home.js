@@ -125,7 +125,34 @@ class Home extends Component {
                 width: '',
                 height: '',
             }
+        ],
+        projectInfo: [
+            {
+                id: 'project1',
+                name: 'project1',
+                src: 'https://image.freepik.com/free-psd/modern-website-mockup_23-2148043716.jpg',
+                info: 'This is the way it goes'
+            },
+            {
+                id: 'project2',
+                name: 'project2',
+                src: 'https://i0.wp.com/365webresources.com/wp-content/uploads/2018/10/FREE-Website-MOCKUP.jpg?ssl=1',
+                info: 'This is the way it shows'
+            },
+            {
+                id: 'project3',
+                name: 'project3',
+                src: 'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/119072809/original/cc78b14638c8cae97938cd5839e5be74cf8394b2/design-creative-unique-psd-website-mockup-and-app-mockup-in-24-hours.png',
+                info: 'This is the way it mows'
+            },
+            {
+                id: 'project4',
+                name: 'project4',
+                src: 'http://mockuplove.com/wp-content/uploads/2017/05/freshy-free-website-template.png',
+                info: 'This is the way it blows'
+            }
         ]
+    
     }
     render() {
         return (
@@ -186,10 +213,16 @@ class Home extends Component {
                     filter: 'grayscale(50%)'
                     }}>
                     <div className="projects-container">
-                        <Project />
-                        <Project />
-                        <Project />
-                        <Project />
+                        {this.state.projectInfo.map((el, index) => {
+                            return (
+                                <Project
+                                    key={index}
+                                    projectId={el.id}
+                                    name={el.name}
+                                    projectSrc={el.src}
+                                />
+                            )                            
+                        })}
                     </div>
                 </section>
                 <div className="section-title">

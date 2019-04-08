@@ -1,11 +1,11 @@
 import React from 'react';
 import './Project.scss';
 
-const Project = () => {
+const Project = ({ name, projectId, projectSrc }) => {
     return (
-        <div className="project-preview">
-            <img src="https://image.freepik.com/free-psd/modern-website-mockup_23-2148043716.jpg" alt="mockup" width="450" height="250" />
-            <div className="project-hover"></div>
+        <div id={projectId} className="project-preview">
+            <img src={projectSrc} alt="mockup" width="450" height="250" />
+            <div className="project-hover"><h3>{name}</h3></div>
         </div>
     )
 }
