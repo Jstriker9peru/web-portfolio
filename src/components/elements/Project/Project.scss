@@ -1,8 +1,25 @@
-.project1 {
+
+.project-preview {
+    position: relative;
     margin: 20px;
     width: 450px;
     height: 250px;
-    border-radius: 10px;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7), rgba(248, 240, 240, 0.5));
-    cursor: pointer;
+    transition: all .25s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+        .project-hover {
+            opacity: 1;
+        }
+    }
+    .project-hover {
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7), rgba(120, 240, 240, 0.5));
+        cursor: pointer;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        z-index: 1;
+        transition: all 0.4s ease-in-out;
+    }
 }

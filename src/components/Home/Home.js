@@ -140,10 +140,19 @@ class Home extends Component {
                     <div className="pic">
                         <img src="https://previews.123rf.com/images/jemastock/jemastock1705/jemastock170506999/78062109-young-man-face-isolated-on-white-background-handsome-boy-face-expression-cartoon-vector-illustration.jpg" alt="avatar" />
                     </div>
+                    <div className="resume-container">
+                        <h3>Check Out My</h3>
+                        <div className="button">
+                            <div>Resume</div>
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
                 </section>
-                <section className="skills-section">
+                
+                <div className="section-title">
                     <h1>SKILLS</h1>
-                    <hr />
+                </div>
+                <section className="skills-section">
                     <div className="skills-container">
                         <div className="skill-type type1">
                             <h2>Front-End</h2>
@@ -164,15 +173,18 @@ class Home extends Component {
                     </div>
                 </section>
 
+                <div className="section-title">
+                    <h1>PROJECTS</h1>
+                </div>
+
                 <section className="project-section" style={{
-                    backgroundImage: `linear-gradient(rgba(0,134,215,0.45),
-                     rgba(0,134,215,0.45)), url(${projectBg})`, 
+                    backgroundImage: `linear-gradient(rgba(0,0,0,0.45),
+                     rgba(0,30,100,0.45)), url(${projectBg})`, 
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center center',
                     filter: 'grayscale(50%)'
                     }}>
-                    <h1>Projects</h1>
                     <div className="projects-container">
                         <Project />
                         <Project />
@@ -180,6 +192,9 @@ class Home extends Component {
                         <Project />
                     </div>
                 </section>
+                <div className="section-title">
+                    <h1>CONTACT</h1>
+                </div>
                 <Footer />
             </div>
         )

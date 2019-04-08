@@ -15,39 +15,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .resume-container {
-        font-size: 18px;
-        color: rgba(0,0,0,0.7);
-        margin: 30px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-transform: uppercase;
-        .button {
-            width: 130px;
-            height: 47px;
-            margin-left: 10px;
-            background: black;
-            border-radius: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: $homeWhite;
-            letter-spacing: 1.2px;
-            text-transform: capitalize;
-            cursor: pointer;
-            .fas {
-                color: $homeWhite;
-                margin-left: 5px;
-            }
-            &:hover {
-                background: $darkBlue;
-                .fas {
-                    color: white;
-                }
-            }
-        }
-    }
+    justify-content: center;
     .sites-container {
         width: 300px;
         height: auto;
@@ -58,7 +26,7 @@ footer {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 2px 0;
+            margin: 3px 0;
             .circle {
                 width: 50px;
                 height: 50px;

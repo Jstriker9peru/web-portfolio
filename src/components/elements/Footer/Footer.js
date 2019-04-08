@@ -9,13 +9,6 @@ const Footer = () => {
                 <div className="dot"></div>
                 <div className="dot"></div>
             </div>
-            <div className="resume-container">
-                <h3>Check Out My</h3>
-                <div className="button">
-                    <div>Resume</div>
-                    <i class="fas fa-external-link-alt"></i>
-                </div>
-            </div>
             <div className="sites-container">
                 <div className="email-container">
                     <div className="circle">
