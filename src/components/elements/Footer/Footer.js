@@ -4,10 +4,7 @@ import './Footer.scss';
 const Footer = () => {
     return (
         <footer>
-            <div className="dots">
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
+            <div className="line1">
             </div>
             <div className="sites-container">
                 <div className="email-container">
@@ -28,6 +25,8 @@ const Footer = () => {
                     </div>
                     <span>Github</span>
                 </div>
+            </div>
+            <div className="line2">
             </div>
         </footer>
     )

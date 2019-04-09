@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Home.scss';
-import Header from '../elements/Header/Header';
+// import Header from '../elements/Header/Header';
 import Skill from '../elements/Skill/Skill';
 import Project from '../elements/Project/Project';
 import Footer from '../elements/Footer/Footer';
@@ -22,7 +22,7 @@ import projectBg from '../../images/project-bg.jpg';
 
 class Home extends Component {
     state = {
-        links: ['Home', 'About', 'Projects', 'Contact'],
+        // links: ['Home', 'About', 'Projects', 'Contact'],
         front: [
             {
                 name: 'React JS',
@@ -164,7 +164,7 @@ class Home extends Component {
 
         return (
             <div className="Home">
-                <Header links={this.state.links} />
+                {/* <Header links={this.state.links} /> */}
                 <section className="first-container">
                     <div className="front-text">
                         <h1>Jonathan Espinoza</h1>
