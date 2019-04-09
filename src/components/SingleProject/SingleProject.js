@@ -3,7 +3,9 @@ import './SingleProject.scss';
 
 const SingleProject = () => {
     return(
-        <div>Hello this is project number1</div>
+        <div className="single-project-container">
+            <h1>Hello this is project number1</h1>
+        </div>
     )
 }
 

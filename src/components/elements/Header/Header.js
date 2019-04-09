@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Header.scss';
+// import { Link as HeaderLink } from 'react-router-dom';
 import Link from './Link/Link';
 
 class Header extends Component {

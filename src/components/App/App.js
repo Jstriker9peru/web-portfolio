@@ -13,6 +13,7 @@ class App extends Component {
           <Header />
           <Switch>
             <Route path="/" component={Home} exact />
+            <Route path="/Home" component={Home} exact />
             <Route path='/:projectId' component={SingleProject} exact />
             <Route component={NotFound} />
           </Switch>
