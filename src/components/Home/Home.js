@@ -181,7 +181,7 @@ class Home extends Component {
                     </div>
                 </section>
                 
-                <div className="section-title">
+                <div id="About" className="section-title">
                     <h1>SKILLS</h1>
                 </div>
                 <section className="skills-section">
@@ -209,7 +209,7 @@ class Home extends Component {
                     <h1>PROJECTS</h1>
                 </div>
 
-                <section className="project-section" style={{
+                <section id="Projects" className="project-section" style={{
                     backgroundImage: `linear-gradient(rgba(0,0,0,0.45),
                      rgba(0,30,100,0.45)), url(${projectBg})`, 
                     backgroundRepeat: 'no-repeat',
@@ -220,7 +220,7 @@ class Home extends Component {
                     <div className="projects-container">
                         {this.state.projectInfo.map((el, index) => {
                             return (
-                                <Link to={`/${el.id}`} >
+                                <Link to={`/${el.id}`} key={index} >
                                     <Project
                                         key={index}
                                         projectId={el.id}

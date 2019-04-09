@@ -1,10 +1,10 @@
 import React from 'react';
 import './SingleProject.scss';
 
-const SingleProject = () => {
+const SingleProject = ({ match }) => {
     return(
         <div className="single-project-container">
-            <h1>Hello this is project number1</h1>
+            <h1>Hello this is {match.params.projectId}</h1>
         </div>
     )
 }

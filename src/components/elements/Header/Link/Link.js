@@ -3,9 +3,11 @@ import './Link.scss';
 
 const Link = ({ name }) => {
     return (
-        <div className="links">
-            <h1>{name}</h1>
-        </div>
+        <a href={`#${name}`}>
+            <div className="links">
+                <h1>{name}</h1>
+            </div>
+        </a>
             
     )
 }

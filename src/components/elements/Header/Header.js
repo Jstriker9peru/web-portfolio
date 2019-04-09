@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Header.scss';
-// import { Link as HeaderLink } from 'react-router-dom';
+import { Link as Linker } from 'react-router-dom';
 import Link from './Link/Link';
 
 class Header extends Component {
@@ -14,7 +14,19 @@ class Header extends Component {
                     <h1>Header</h1>
                 </div> */}
                 <div className="link-container">
-                    {this.state.links.map((el, index) => <Link key={index} name={el} />)}
+                    {this.state.links.map((el, index) => {
+                        if (el === 'Home') {
+                            return (
+                                <Linker to="/Home">
+                                    <Link key={index} name={el}/>
+                                </Linker>
+                            )
+                        } else {
+                            return (
+                              <Link key={index} name={el}/>
+                            )
+                        }
+                    })}
                 </div>
             </div>
         )
