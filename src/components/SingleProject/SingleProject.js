@@ -17,10 +17,33 @@ const SingleProject = ({ match }) => {
                 </div>
             </div>
             <div className="middle-container">
-                <div>
-                    <div>Technology Used</div>
-                    <div>Website Type</div>
-                    <div>Mobile Responsive</div>
+                <div className="extra-details">
+                    <div className="extra1">
+                        <h3>Technology Used</h3>
+                        <h4>Something</h4>
+                    </div>
+                    <div className="extra2">
+                        <h3>Website Type</h3>
+                        <h4>Something</h4>
+                    </div>
+                    <div className="extra3">
+                        <h3>Mobile Responsive</h3>
+                        <h4>Something</h4>
+                    </div>
+                </div>
+            </div>
+            <div className="bottom-container">
+                <h2>Other Projects</h2>
+                <div className="img-container">
+                    <div className="project-img">
+                        <img src="https://i0.wp.com/365webresources.com/wp-content/uploads/2018/10/FREE-Website-MOCKUP.jpg?ssl=1" alt="img1" width="200" height='150' />
+                    </div>
+                    <div className="project-img">
+                        <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/119072809/original/cc78b14638c8cae97938cd5839e5be74cf8394b2/design-creative-unique-psd-website-mockup-and-app-mockup-in-24-hours.png" alt="img2" width="200" height='150' />
+                    </div>
+                    <div className="project-img">
+                        <img src="http://mockuplove.com/wp-content/uploads/2017/05/freshy-free-website-template.png" alt="img3" width="200" height='150' />
+                    </div>
                 </div>
             </div>
         </div>

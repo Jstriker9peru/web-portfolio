@@ -1,10 +1,7 @@
 .single-project-container {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: auto;
+    padding-top: 70px;
     .title-container {
         width: 100%;
         display: flex;
@@ -23,15 +20,55 @@
             padding: 40px;
         }
         .description-container {
-            padding: 40px 30px;
+            padding: 40px 80px 40px 40px;
             h2 {
                 margin-bottom: 20px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+            p {
+                letter-spacing: 2px;
+                line-height: 35px;
             }
         }
     }
     .middle-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        .extra-details {
+            display: flex;
+            width: auto;
+            .extra1,
+            .extra2,
+            .extra3 {
+                margin: 40px 80px;
+                width: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+        }
+
     }
     .bottom-container {
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 50px 20px;
+        .img-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .project-img {
+                margin: 10px 40px;
+                cursor: pointer;
+            }
+        }
     }
 }
