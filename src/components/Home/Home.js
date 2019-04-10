@@ -220,7 +220,7 @@ class Home extends Component {
                     <div className="projects-container">
                         {this.state.projectInfo.map((el, index) => {
                             return (
-                                <Link to={`/${el.id}`} key={index} >
+                                <Link to={{ pathname: `/${el.id}`, state: {projectSrc: `${el.src}`} }} key={index} >
                                     <Project
                                         key={index}
                                         projectId={el.id}

@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <React.Fragment>
-          <Header />
+          <Header  filePath={this.props.location}/>
           <Switch>
             <Route path="/" component={Home} exact />
             <Route path="/Home" component={Home} exact />

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Header.scss';
-import { Link as Linker } from 'react-router-dom';
+import { Link as Linker, withRouter } from 'react-router-dom';
 import Link from './Link/Link';
 
 class Header extends Component {
@@ -8,6 +8,7 @@ class Header extends Component {
         links: ['Home', 'About', 'Projects', 'Contact']
     }
     render() {
+        const { pathname } = this.props.location;
         return (
             <div className="Header">
                 {/* <div className="icon">
@@ -17,13 +18,13 @@ class Header extends Component {
                     {this.state.links.map((el, index) => {
                         if (el === 'Home') {
                             return (
-                                <Linker to="/Home">
+                                <Linker key={index} to="/Home">
                                     <Link key={index} name={el}/>
                                 </Linker>
                             )
                         } else {
                             return (
-                              <Link key={index} name={el}/>
+                              <Link key={index} name={el} pathName={pathname} />
                             )
                         }
                     })}
@@ -33,4 +34,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default withRouter(Header);
