@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import './SingleProject.scss';
+import { Link } from 'react-router-dom';
 
 class SingleProject extends Component {
     render() {
         const { match } = this.props;
         const { state } = this.props.location;
+        let otherList = state.projectList.filter((el) => {
+            return el.src !== state.projectSrc;
+        });
         return(
             <div className="single-project-container">
                 <div className="title-container">
@@ -38,15 +42,15 @@ class SingleProject extends Component {
                 <div className="bottom-container">
                     <h2>Other Projects</h2>
                     <div className="img-container">
-                        <div className="project-img">
-                            <img src="https://i0.wp.com/365webresources.com/wp-content/uploads/2018/10/FREE-Website-MOCKUP.jpg?ssl=1" alt="img1" width="200" height='150' />
-                        </div>
-                        <div className="project-img">
-                            <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/119072809/original/cc78b14638c8cae97938cd5839e5be74cf8394b2/design-creative-unique-psd-website-mockup-and-app-mockup-in-24-hours.png" alt="img2" width="200" height='150' />
-                        </div>
-                        <div className="project-img">
-                            <img src="http://mockuplove.com/wp-content/uploads/2017/05/freshy-free-website-template.png" alt="img3" width="200" height='150' />
-                        </div>
+                        {otherList.map((el, index) => {
+                            return (
+                                <Link to={{ pathname: `/${el.id}`, state: {projectSrc: `${el.src}`, projectList: state.projectList } }} key={index} >
+                                    <div className="project-img" key={index}>
+                                        <img src={el.src} alt="img1" width="200" height='150' />
+                                    </div>
+                                </Link>
+                            )
+                        })}
                     </div>
                 </div>
             </div>
