@@ -135,6 +135,7 @@ class Home extends Component {
 
         return (
             <div className="Home">
+                <ScrollableAnchor id={'Home'}>
                 <section className="first-container">
                     <div className="front-text">
                         <h1>Jonathan Espinoza</h1>
@@ -152,6 +153,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </section>
+                </ScrollableAnchor>
                 
                 <ScrollableAnchor id={'About'}>
                     <div className="section-title">

@@ -1,11 +1,10 @@
 import React from 'react';
 import './Link.scss';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { goToTop } from 'react-scrollable-anchor';
 
 const Link = ({ name, pathName }) => {
-    console.log(pathName);
     return (
-        <a href={ pathName === '/Home' || pathName === "/" ? `#${name}` : `./Home#${name}`}> 
+        <a href={ pathName === '/Home' || pathName === "/" ? `#${name}` : `./Home#${name}`} onClick={() => { if (name === "Home") { return goToTop() } }}> 
             <div className="links">
                 <h1>{name}</h1>
             </div>
