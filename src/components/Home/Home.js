@@ -19,6 +19,8 @@ import laravel from '../../images/logos/laravel-logo.png';
 import wordpress from '../../images/logos/wordpress-logo.png';
 import webpack from '../../images/logos/webpack-logo.png';
 import projectBg from '../../images/project-bg.jpg';
+import ScrollableAnchor from 'react-scrollable-anchor';
+import { configureAnchors } from 'react-scrollable-anchor';
 
 class Home extends Component {
     state = {
@@ -129,6 +131,7 @@ class Home extends Component {
 
 
     render() {
+        configureAnchors({offset: -70, scrollDuration: 500});
 
         return (
             <div className="Home">
@@ -150,9 +153,11 @@ class Home extends Component {
                     </div>
                 </section>
                 
-                <div id="About" className="section-title">
-                    <h1>SKILLS</h1>
-                </div>
+                <ScrollableAnchor id={'About'}>
+                    <div className="section-title">
+                        <h1>SKILLS</h1>
+                    </div>
+                </ScrollableAnchor>
                 <section className="skills-section">
                     <div className="skills-container">
                         <div className="skill-type type1">
@@ -174,11 +179,13 @@ class Home extends Component {
                     </div>
                 </section>
 
-                <div className="section-title">
-                    <h1>PROJECTS</h1>
-                </div>
+                <ScrollableAnchor id={'Projects'}>                
+                    <div className="section-title">
+                        <h1>PROJECTS</h1>
+                    </div>
+                </ScrollableAnchor>
 
-                <section id="Projects" className="project-section" style={{
+                <section className="project-section" style={{
                     backgroundImage: `linear-gradient(rgba(0,0,0,0.45),
                      rgba(0,30,100,0.45)), url(${projectBg})`, 
                     backgroundRepeat: 'no-repeat',
@@ -201,9 +208,11 @@ class Home extends Component {
                         })}
                     </div>
                 </section>
-                <div className="section-title">
-                    <h1>CONTACT</h1>
-                </div>
+                <ScrollableAnchor id={'Contact'}>
+                    <div className="section-title">
+                        <h1>CONTACT</h1>
+                    </div>
+                </ScrollableAnchor>
                 <Footer />
             </div>
         )

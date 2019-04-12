@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './SingleProject.scss';
 import { Link } from 'react-router-dom';
+import { goToTop } from 'react-scrollable-anchor';
 
 class SingleProject extends Component {
     render() {
+        goToTop();
         const { match } = this.props;
         const { state } = this.props.location;
         let otherList = state.projectList.filter((el) => {
