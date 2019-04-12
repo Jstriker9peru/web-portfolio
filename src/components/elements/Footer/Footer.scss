@@ -38,25 +38,28 @@ footer {
             justify-content: center;
             align-items: center;
             margin: 3px 0;
-            .circle {
-                width: 50px;
-                height: 50px;
-                background: black;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                .fas,
-                .fab {
-                    color: $homeWhite;
-                    font-size: 26px;
-                }
-                &:hover {
-                    background: $darkBlue;
+            .ext-link {
+                text-decoration: none;
+                .circle {
+                    width: 50px;
+                    height: 50px;
+                    background: black;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
                     .fas,
                     .fab {
-                        color: white;
+                        color: $homeWhite;
+                        font-size: 26px;
+                    }
+                    &:hover {
+                        background: $darkBlue;
+                        .fas,
+                        .fab {
+                            color: white;
+                        }
                     }
                 }
             }

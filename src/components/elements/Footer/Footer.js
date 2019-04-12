@@ -8,21 +8,27 @@ const Footer = () => {
             </div>
             <div className="sites-container">
                 <div className="email-container">
-                    <div className="circle">
-                        <i className="fas fa-envelope"></i> 
-                    </div>
-                    <span>jstriker9peru@gmail.com</span>
+                    <a className="ext-link" href="mailto:jonespinoza111@gmail.com">
+                        <div className="circle">
+                            <i className="fas fa-envelope"></i> 
+                        </div>
+                    </a>
+                    <span>jonespinoza111@gmail.com</span>
                 </div>
                 <div className="email-container">
-                    <div className="circle">
-                    <i className="fab fa-linkedin"></i>
-                    </div>
+                    <a className="ext-link" href="https://www.linkedin.com/in/jonathan-espinoza-21965a184/" target="_blank" rel="noopener noreferrer">
+                        <div className="circle">
+                        <i className="fab fa-linkedin"></i>
+                        </div>
+                    </a>
                     <span>LinkedIn</span>
                 </div>
                 <div className="email-container">
-                    <div className="circle">
-                    <i className="fab fa-github-alt"></i>
-                    </div>
+                    <a className="ext-link" href="https://github.com/Jstriker9peru" target="_blank" rel="noopener noreferrer">
+                        <div className="circle">
+                        <i className="fab fa-github-alt"></i>
+                        </div>
+                    </a>
                     <span>Github</span>
                 </div>
             </div>
