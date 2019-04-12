@@ -135,6 +135,7 @@ class Home extends Component {
 
         return (
             <div className="Home">
+                
                 <ScrollableAnchor id={'Home'}>
                 <section className="first-container">
                     <div className="front-text">
