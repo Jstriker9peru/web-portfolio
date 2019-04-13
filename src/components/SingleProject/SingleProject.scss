@@ -55,6 +55,7 @@
                 flex-direction: column;
                 h3 {
                     font-size: 22px;
+                    font-weight: 500;
                     margin-bottom: 5px;
                 }
                 h4 {
@@ -76,6 +77,9 @@
         align-items: center;
         flex-direction: column;
         margin: 50px 20px;
+        h2 {
+            font-weight: 500;
+        }
         .img-container {
             width: 100%;
             display: flex;
