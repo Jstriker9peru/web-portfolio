@@ -46,7 +46,7 @@ class App extends Component {
           <Switch>
             <Route path="/" render={() => (<Home projectInfo={this.state.projectInfo} />)} exact />
             <Route path="/Home" render={() => (<Home projectInfo={this.state.projectInfo} />)} exact />
-            <Route path='/:projectId' component={SingleProject} exact />
+            <Route path='/:projectId' projectInfo={this.state.projectInfo} component={SingleProject} exact />
             <Route component={NotFound} />
           </Switch>
         </React.Fragment>

@@ -10,20 +10,20 @@ class SingleProject extends Component {
         // const { match } = this.props;
         const { state } = this.props.location;
         let otherList = state.projectList.filter((el) => {
-            return el.src !== state.projectSrc;
+            return el.src !== state.allInfo.src;
         });
         return(
             <div className="single-project-container">
                 <div className="title-container">
-                    <h1>{state.name}</h1>
+                    <h1>{state.allInfo.name}</h1>
                 </div>
                 <div className="top-container">
                     <div className="img-container">
-                        <img src={state.projectSrc} alt="project-img" width="626" height="375" />
+                        <img src={state.allInfo.src} alt="project-img" width="626" height="375" />
                     </div>
                     <div className="description-container">
                         <h2>Project Details</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Iaculis nunc sed augue lacus. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Cras tincidunt lobortis feugiat vivamus. Imperdiet nulla malesuada pellentesque elit. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Faucibus interdum posuere lorem ipsum dolor. </p>
+                        <p>{state.allInfo.info} </p>
                     </div>
                 </div>
                 <div className="middle-container">
@@ -49,7 +49,7 @@ class SingleProject extends Component {
                     <div className="img-container">
                         {otherList.map((el, index) => {
                             return (
-                                <Link to={{ pathname: `/${el.id}`, state: {projectSrc: `${el.src}`, projectList: state.projectList, name: `${el.name}` } }} key={index} >
+                                <Link to={{ pathname: `/${el.id}`, state: { projectList: state.projectList, allInfo: el } }} key={index} >
                                     <div className="project-img" key={index}>
                                         <img src={el.src} alt="img1" width="200" height='150' />
                                     </div>
