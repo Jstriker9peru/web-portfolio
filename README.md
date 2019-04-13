@@ -9,6 +9,6 @@ This is my official Web Developer Portfolio that showcases my skills as well as 
 
 ## Built With
 
-..*HTML5
-..*CSS3
-..*React JS
+* HTML5
+* CSS3
+* React JS
