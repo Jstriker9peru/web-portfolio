@@ -3,10 +3,11 @@ import './SingleProject.scss';
 import { Link } from 'react-router-dom';
 import { goToTop } from 'react-scrollable-anchor';
 
+
 class SingleProject extends Component {
     render() {
         goToTop();
-        const { match } = this.props;
+        // const { match } = this.props;
         const { state } = this.props.location;
         let otherList = state.projectList.filter((el) => {
             return el.src !== state.projectSrc;
@@ -14,7 +15,7 @@ class SingleProject extends Component {
         return(
             <div className="single-project-container">
                 <div className="title-container">
-                    <h1>{match.params.projectId}</h1>
+                    <h1>{state.name}</h1>
                 </div>
                 <div className="top-container">
                     <div className="img-container">
@@ -31,10 +32,12 @@ class SingleProject extends Component {
                             <h3>Technology Used</h3>
                             <h4>Something</h4>
                         </div>
+                        <div className="line"></div>
                         <div className="extra2">
                             <h3>Website Type</h3>
                             <h4>Something</h4>
                         </div>
+                        <div className="line"></div>
                         <div className="extra3">
                             <h3>Mobile Responsive</h3>
                             <h4>Something</h4>
@@ -46,7 +49,7 @@ class SingleProject extends Component {
                     <div className="img-container">
                         {otherList.map((el, index) => {
                             return (
-                                <Link to={{ pathname: `/${el.id}`, state: {projectSrc: `${el.src}`, projectList: state.projectList } }} key={index} >
+                                <Link to={{ pathname: `/${el.id}`, state: {projectSrc: `${el.src}`, projectList: state.projectList, name: `${el.name}` } }} key={index} >
                                     <div className="project-img" key={index}>
                                         <img src={el.src} alt="img1" width="200" height='150' />
                                     </div>
