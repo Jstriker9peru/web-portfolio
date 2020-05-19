@@ -138,13 +138,21 @@ class Home extends Component {
                 
                 <ScrollableAnchor id={'Home'}>
                 <section className="first-container">
-                    <div className="front-text">
-                        <h1>Jonathan Espinoza</h1>
-                        <h2>Professional Web Developer</h2>
-                        <p>I design and code beautifully simple things, and I love what I do.</p>
-                    </div>
-                    <div className="pic">
-                    <img src="https://previews.123rf.com/images/jemastock/jemastock1705/jemastock170506999/78062109-young-man-face-isolated-on-white-background-handsome-boy-face-expression-cartoon-vector-illustration.jpg" alt="avatar" />
+                    <div className="box-container">
+                        <img width="250" height="200" alt="desktop" src="/images/desktopimg3.png" />
+                        <div className="front-text">
+                            <h1>Jonathan Espinoza</h1>
+                            <h2>Professional Web Developer</h2>
+                            <p>I code beautifully simple things, and I love what I do</p>
+                            <div className="text-ani">
+                                <h2 className="start-text">I love to </h2>
+                                <ul className="list-text">
+                                    <li>Code</li>
+                                    <li>Learn</li>
+                                    <li>Improve</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div className="resume-container">
                         <h3>Check Out My</h3>
