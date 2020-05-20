@@ -1,30 +1,59 @@
-import React, { Component } from 'react';
-import './Project.scss';
+import React, { Component } from "react";
+import "./Project.scss";
+import SingleProject from "../../SingleProject/SingleProject";
 
 class Project extends Component {
     constructor(props) {
         super(props);
         this.state = {
             hover: false,
-        }
-        this.onMouseOver = this.onMouseOver.bind(this);
+            clicked: false,
+        };
+        // this.onMouseOver = this.onMouseOver.bind(this);
     }
 
-    onMouseOver(e) {
-        this.setState(prevState => {
+    // onMouseOver(e) {
+    //     if (!this.state.clicked) {
+    //         this.setState((prevState) => {
+    //             return {
+    //                 hover: !prevState.hover,
+    //             };
+    //         });
+    //     }
+    // }
+
+    onClick = (e) => {
+        this.setState((prevState) => {
             return {
-                hover: !prevState.hover
-            }
-        })
-    }
+                clicked: !prevState.clicked,
+            };
+        });
+    };
+
     render() {
         const { name, projectId, projectSrc } = this.props;
+        const { hover, clicked } = this.state;
         return (
-            <div id={projectId} className={`project-preview ${this.state.hover ? 'hover-effect' : ''}`} onMouseEnter={this.onMouseOver} onMouseLeave={this.onMouseOver} >
-                <img src={projectSrc} alt="mockup" width="450" height="250" />
-                <div className="project-hover"><h3>{name}</h3></div>
+            <div
+                id={projectId}
+                className={`project-preview ${hover ? "hover-effect" : ""} ${clicked ? "click-transition-background" : ""}`}
+                // onMouseEnter={this.onMouseOver}
+                // onMouseLeave={this.onMouseOver}
+                onClick={this.onClick}
+            >
+                <img
+                    className={`${clicked ? "click-transition-img" : ""}`}
+                    src={projectSrc}
+                    alt="mockup"
+                    width="450"
+                    height="250"
+                />
+                <div className="project-hover">
+                    <h3>{name}</h3>
+                    <p>Click for more info</p>
+                </div>
             </div>
-        )
+        );
     }
 }
 
