@@ -1,0 +1,66 @@
+.circular-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    background: #ccf2f2;
+    color: black;
+    overflow: hidden;
+    .fas {
+        font-size: 5em;
+    }
+    .image1 {
+        transform: translate(0, 0.5em);
+        animation: switch1 8s linear 0s infinite;
+    }
+    .image2 {
+        transform: translate(0, 1.5em);
+        animation: switch2 8s linear 0s infinite;
+
+    }
+    .image {
+        position: relative;
+        transition: transform 1s ease-in-out 0s, opacity 2s ease-in-out 0s;
+    }
+}
+
+@keyframes switch1 {
+    0%, 25% {
+        transform: translate(0, 0.5em);
+        opacity: 1;
+    }
+    40% {
+        transform: translate(0, -2em);
+        opacity: 0;
+    }
+    45%, 70% {
+        transform: translate(0, 2.5em);
+        opacity: 0;
+    }
+    85% {
+        transform: translate(0, 0.5em);
+        opacity: 1;
+    }
+}
+
+@keyframes switch2 {
+    0%, 25%  {
+        transform: translate(0, 1.5em);
+        opacity: 1;
+    }
+    40%, 70% {
+        transform: translate(0, -0.5em);
+        opacity: 1;
+    }
+    85% {
+        transform: translate(0, -2.5em);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 1.5em);
+        opacity: 0;
+    }
+}
