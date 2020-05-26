@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Project.scss";
-import SingleProject from "../../SingleProject/SingleProject";
 
 class Project extends Component {
     constructor(props) {
@@ -9,18 +8,7 @@ class Project extends Component {
             hover: false,
             clicked: false,
         };
-        // this.onMouseOver = this.onMouseOver.bind(this);
     }
-
-    // onMouseOver(e) {
-    //     if (!this.state.clicked) {
-    //         this.setState((prevState) => {
-    //             return {
-    //                 hover: !prevState.hover,
-    //             };
-    //         });
-    //     }
-    // }
 
     onClick = (e) => {
         this.setState((prevState) => {
