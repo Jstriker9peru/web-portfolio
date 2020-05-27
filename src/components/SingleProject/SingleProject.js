@@ -5,15 +5,32 @@ import { goToTop } from 'react-scrollable-anchor';
 
 
 class SingleProject extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            ready: false
+        };
+    }
+    transition = () => {
+        setTimeout(() => {
+            this.setState({
+                ready: true
+            })
+        }, 1);
+    }
     render() {
         goToTop();
-        // const { match } = this.props;
+        
         const { state } = this.props.location;
+        const { ready } = this.state;
+        if (!ready) {
+            this.transition();
+        }
         let otherList = state.projectList.filter((el) => {
             return el.src !== state.allInfo.src;
         });
         return(
-            <div className="single-project-container">
+            <div className={`single-project-container ${ready ? 'expand' : ''}`}>
                 <div className="title-container">
                     <h1>{state.allInfo.name}</h1>
                 </div>
@@ -51,7 +68,7 @@ class SingleProject extends Component {
                             return (
                                 <Link to={{ pathname: `/${el.id}`, state: { projectList: state.projectList, allInfo: el } }} key={index} >
                                     <div className="project-img" key={index}>
-                                        <img src={el.src} alt="img1" width="200" height='150' />
+                                        <img src={el.src} alt="img1" width="250" height='150' />
                                     </div>
                                 </Link>
                             )

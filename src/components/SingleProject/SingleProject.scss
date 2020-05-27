@@ -3,7 +3,11 @@
 .single-project-container {
     width: 100%;
     height: auto;
-    padding-top: 70px;
+    padding-top: 100px;
+    position: absolute;
+    // transform: scale(0.2);
+    transform: translate(-100em, 0em);
+    transition: transform 0.5s ease-in-out 0s;
     .title-container {
         width: 100%;
         display: flex;
@@ -92,4 +96,9 @@
             }
         }
     }
+}
+
+.expand {
+    // transform: scale(1);
+    transform: translate(0, 0);
 }
